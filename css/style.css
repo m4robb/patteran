@@ -1,0 +1,57 @@
+/* =@imports // Note that @imports should be minified and 
+/*              included in the main CSS file for production.
+/*-----------------------------------------------------------*/
+@import url('normalize.css');
+
+
+/* =@HTML
+/*-----------------------------------------------------------*/
+
+/* * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}*/
+
+/* =@Classes
+/*-----------------------------------------------------------*/
+
+.ir {
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cf:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* scroll interface ****************** */
+
+#scroll-wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #ff0000;
+    overflow: hidden;
+    -webkit-filter: sepia(50%); 
+}
+
+
+/* video element ********************* */
+#main-screen {
+    display:none;
+    position:absolute;
+width:50%; 
+height:50%; 
+-webkit-filter: grayscale(100%) contrast(300%) blur(5px); 
+}
