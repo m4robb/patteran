@@ -10,21 +10,45 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-custom.css">
 
     <!--[if lt IE 9]>
         <script src="js/lib/html5.js"></script>
     <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
+    <img id="black-screen" width="100%" height="100%" src="images/blackScreen.gif"/>
 
-    <video id="main-screen" src="media/video/source/underground_passage_01.webm"></video>
+    <video id="main-screen" muted="true"></video>
 
-    <div id="scroll-wrapper"><canvas id="video-canvas"></canvas></div>
+    <div id="scroll-wrapper">
+        <canvas id="video-canvas-underlay" class="tilt-shift-under"></canvas>
+        <canvas id="video-canvas" class="tilt-shift-over"></canvas>
+    </div>
+
+   <!--
+    <div id="still-screen">
+        <img id="tilt-shift-under" width="100%" src="media/still/forest_abandoned_airplane.jpg" alt="">
+        <img id="tilt-shift-over" width="100%" src="media/still/forest_abandoned_airplane.jpg" alt="">
+    </div>
+
+-->
+    
+    <div id="video-menu-container" class="text-block-black-75">
+        <span id="video-menu-toggle" class="text-link">Open Menu</span>
+        <div id="video-menu"><ul></ul></div>
+    </div>
 
 
-    <script src="js/lib/jquery.1.8.2.min.js"></script>
+
+    <div id="video-status"></div>
+
+    <div id="time-slider"></div>
+
+    <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/jquery-ui-touch-punch.min.js"></script>
     <script src="js/lib/popcorn1.3.min.js"></script>

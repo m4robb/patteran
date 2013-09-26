@@ -1,0 +1,12 @@
+     var pop = Popcorn( "#video" );
+ 2 
+ 3     pop.code({
+ 4       start: 1,
+ 5       end: 3,
+ 6       onStart: function( options ) {
+ 7         document.getElementById( "test1" ).innerHTML = "Yes";
+ 8       },
+ 9       onEnd: function( options ) {
+10         document.getElementById( "test1" ).innerHTML = "No";
+11       }
+12     });

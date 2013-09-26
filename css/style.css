@@ -33,6 +33,14 @@
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size:100%;
+        overflow:hidden;
+}
+
+ul { list-style:none; margin:0; padding:0;}
+
 /* scroll interface ****************** */
 
 #scroll-wrapper {
@@ -41,17 +49,116 @@
     left:0;
     right:0;
     bottom:0;
-    background-color: #ff0000;
     overflow: hidden;
-    -webkit-filter: sepia(50%); 
+}
+
+#scroll-wrapper canvas{
+    position:absolute;
+}
+
+.tilt-shift-over {
+    position:absolute;
+    width:  100%;
+    -webkit-filter: blur(4px);
+    -webkit-mask-box-image: -webkit-linear-gradient(black 15%, transparent 45%, transparent 55%, black 85%);
 }
 
 
-/* video element ********************* */
+.tilt-shift-under {
+    position:absolute;
+    width: 100%;
+}
+
+
+/* screen element ********************* */
+
+/*video */
+
 #main-screen {
     display:none;
-    position:absolute;
-width:50%; 
-height:50%; 
--webkit-filter: grayscale(100%) contrast(300%) blur(5px); 
 }
+
+#time-slider {
+    position:absolute;
+    width:100%;
+    bottom:0px;
+    opacity:.3;
+    height:10px;
+}
+
+/*fade to black*/
+
+#black-screen {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+}
+
+/*text elements*/
+
+.text-block-black-75 {
+    color:#666666;
+    background:rgba(0,0,0,0.7);
+    padding:5px;
+}
+
+#video-menu-container {
+    font-size:.85em;
+    position: absolute;
+    top:0;
+    left:0;
+    font-size:.85em;
+}
+
+.text-link {
+   cursor: pointer;  
+}
+
+.text-link:hover {
+    color:#cccccc;
+    text-decoration: underline;
+}
+
+
+#video-menu {
+    font-size:.85em;
+    display:none;
+}
+
+
+#video-status {
+    position: absolute;
+    top:0;
+    right:0;
+    width:10%;
+
+}
+
+/*tilt shift*/
+
+#still-screen{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+#tilt-shift-over {
+    position:absolute;
+    width:  100%;
+    -webkit-filter: blur(5px) sepia(70%);
+    -webkit-mask-box-image: -webkit-linear-gradient(black 15%, transparent 45%, transparent 55%, black 85%);
+}
+
+
+#tilt-shift-under {
+    position:absolute;
+    width: 100%;
+    -webkit-filter: sepia(70%);
+    -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+          box-shadow: 5px 5px 10px rgba(0,0,0,0.8);
+}
+
+
+
